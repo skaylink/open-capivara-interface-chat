@@ -54,6 +54,8 @@ app type: multitenant
 creation type: create new microsoft app ID
 
 Tier: standard
+
+Location: Global
 **************************************/
 
 
