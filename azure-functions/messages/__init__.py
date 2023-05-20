@@ -44,7 +44,7 @@ class EchoBot(ActivityHandler):
     ):
         for member in members_added:
             if member.id != turn_context.activity.recipient.id:
-                await turn_context.send_activity(self.compose_activity_into(turn_context))
+                await turn_context.send_activity(await self.compose_activity_into(turn_context))
 
     async def on_message_activity(self, turn_context: TurnContext):
         logging.info(f'>>>>>> dir turn_context: {dir(turn_context)}')
@@ -117,7 +117,7 @@ async def main(req: func.HttpRequest) -> func.HttpResponse:
     if ("Content-Type" in req.headers) and ("application/json" in req.headers["Content-Type"]):
         body = req.get_json()
     else:
-        return func.HttpResponse('', status=415)
+        return func.HttpResponse('', status_code=415)
 
     activity = Activity().deserialize(body)
     auth_header = req.headers["Authorization"] if "Authorization" in req.headers else ""
@@ -125,4 +125,4 @@ async def main(req: func.HttpRequest) -> func.HttpResponse:
     response = await ADAPTER.process_activity(activity, auth_header, BOT.on_turn)
     if response:
         return func.HttpResponse(data=json.dumps(response.body), status_code=response.status)
-    return func.HttpResponse('', status=200)
+    return func.HttpResponse('', status_code=200)

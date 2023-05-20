@@ -47,3 +47,19 @@ module "azure-function-automation" {
   scripts_publish_name = "function_app_publish"
 }
 
+/**************************************
+TODO: azure bot
+app type: multitenant
+
+creation type: create new microsoft app ID
+
+Tier: standard
+**************************************/
+
+
+/**************************************
+TODO: language service
+tier S
+
+Custom question answering, with tier F0 cognitive search
+**************************************/
