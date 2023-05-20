@@ -1,0 +1,42 @@
+numpy==1.19.5
+numba==0.51.2
+pandas==1.1.5
+pandas-datareader==0.9.0
+pandas-gbq==0.13.3
+pandas-profiling==1.4.1
+pandocfilters==1.4.3
+scipy==1.4.1
+pydantic
+python-dateutil
+seaborn==0.11.1
+matplotlib==3.2.2
+plotly-express
+Unidecode==0.4.20
+tables
+tabulate
+text-unidecode==1.3
+tqdm==4.62.0
+Pillow==7.1.2
+python-dotenv
+requests
+aiohttp
+openai
+html2text
+dateparser
+
+pymsteams
+azure.storage.blob
+azure-storage-queue
+azure-cosmos
+azure-identity
+azure-keyvault-secrets
+
+# bots
+botbuilder-integration-aiohttp>=4.14.0
+
+# Phone calls
+twilio==7.16.0
+
+# Function specific
+azure-functions
+python-jose

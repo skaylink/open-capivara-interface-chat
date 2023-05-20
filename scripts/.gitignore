@@ -1,0 +1,3 @@
+create_seed_infra.sh
+function_app_publish.sh
+terraform_apply.sh
