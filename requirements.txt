@@ -38,6 +38,9 @@ azure-ai-language-questionanswering
 # Phone calls
 twilio==7.16.0
 
-# Function specific
+# Dev only
+python-dotenv
+
+# Function only
 azure-functions
 python-jose
